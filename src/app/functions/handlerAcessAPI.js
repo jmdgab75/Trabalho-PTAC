@@ -1,6 +1,6 @@
 'use server'
 
-const lista = [
+const getUser = [
     {
       name: "Any",
       email: "any@email.com",
@@ -14,7 +14,7 @@ const lista = [
       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     },
     {
-      name: "isabel",
+      name: "Isabel",
       email: "isabel@email.com",
       password: "senha789",
       token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
@@ -23,9 +23,9 @@ const lista = [
 
   
 const getUserAuthenticated = (userLogin) => {
-   let usermach = [];
+   let usermach = {};
 
-    lista.map((user) =>{
+    getUser.map((user) =>{
 
    if(user.email === userLogin.email && user.password === userLogin.password){
    usermach = user
@@ -36,6 +36,6 @@ return usermach
 }
 
 const getUsers = () =>{
-     return lista
+     return getUser
 }
 export { getUsers, getUserAuthenticated };
