@@ -13,7 +13,7 @@ export default async function Register() {
 
 return(
     <div>
-      <h1>Alterar dados</h1>
+      <h1>Cadastrar usuário</h1>
       <form onSubmit={onRegister}>
       <input
           placeholder='Nome:'

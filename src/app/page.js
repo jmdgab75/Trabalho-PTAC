@@ -1,9 +1,10 @@
 'use client'
 import { useState } from "react";
-import handlerAcessUser from "./functions/handlerAcess"
+import handlerAcessUser from "./functions/handlerAcess";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -15,19 +16,20 @@ export default function Login() {
   const handlerLogin = async (e) => {
     e.preventDefault();
     try {
-     const userMacht =  await handlerAcessUser(user);
-        if(userMacht.token === undefined){
-    toast.error("Erro no e-mail ou senha!");
-        }
+      const userMacht = await handlerAcessUser(user);
+      if (userMacht.token === undefined) {
+        toast.error("Erro no e-mail ou senha!");
+      }
       push('/pages/dashboard');
     } catch {
       refresh();
     }
   }
+
   return (
-    <div>
+    <div className="login-container">
       <h1>Login</h1>
-      <form onSubmit={handlerLogin}>
+      <form onSubmit={handlerLogin} className="login-form">
         <input
           placeholder='E-mail'
           type="email"
@@ -38,7 +40,7 @@ export default function Login() {
           type='password'
           onChange={(e) => { setUser({ ...user, password: e.target.value }) }}>
         </input>
-        <button>Entrar</button>
+        <button className="login-button">Entrar</button>
       </form>
       <ToastContainer />
     </div>
