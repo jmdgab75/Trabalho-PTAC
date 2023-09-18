@@ -32,7 +32,7 @@ const getUserAuthenticated = (userLogin) => {
     } 
 })
  
-return usermach 
+return usermach
 }
 
 const getUsers = () =>{

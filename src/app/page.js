@@ -15,8 +15,8 @@ export default function Login() {
   const handlerLogin = async (e) => {
     e.preventDefault();
     try {
-     const userAuth =  await handlerAcessUser(user);
-        if(userAuth.token === undefined){
+     const userMacht =  await handlerAcessUser(user);
+        if(userMacht.token === undefined){
     toast.error("Erro no e-mail ou senha!");
         }
       push('/pages/dashboard');
