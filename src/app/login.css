@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #F3F5F9;
   }
   
   h1 {
@@ -27,8 +28,8 @@
   }
   
   button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #90735C; 
+    color: #F3F5F9; 
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -37,6 +38,6 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #E0D0C1;
   }
   
