@@ -24,12 +24,12 @@ export const middleware = (request) => {
         }
     }
 
-    // if (!isTokenValidated || !token) {
-    //     if (request.nextUrl.pathname === '/pages/dashboard') {
-    //         return NextResponse.redirect(urlLogin);
-    //     }
+     if (!isTokenValidated || !token) {
+        if (request.nextUrl.pathname === '/pages/dashboard') {
+            return NextResponse.redirect(urlLogin);
+        }
 
-    //}
+    }
     NextResponse.next();
 };
 
