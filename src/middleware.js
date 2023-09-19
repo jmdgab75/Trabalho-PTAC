@@ -24,10 +24,15 @@ export const middleware = (request) => {
         }
     }
 
+    // if (!isTokenValidated || !token) {
+    //     if (request.nextUrl.pathname === '/pages/dashboard') {
+    //         return NextResponse.redirect(urlLogin);
+    //     }
 
+    //}
     NextResponse.next();
 };
 
 export const config = {
-    matcher: ['/', '/pages/dashboard', '/pages/register', '/pages/alter']
+    matcher: ['/', '/pages/dashboard', '/pages/register', '/pages/alterar']
 };
